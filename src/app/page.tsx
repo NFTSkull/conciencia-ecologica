@@ -595,7 +595,7 @@ export default function HomePage() {
                     </p>
                     
                     <p>
-                      El sionismo se sustenta en la <strong className="text-orange-600">supremacía racial a través de la religión</strong>, pues sostiene que los judíos son el pueblo elegido de Dios por tanto, tienen el derecho de ocupar Palestina, "el lugar sagrado prometido por Dios"; promueve una enorme victimización, sustentada en discursos desquiciantes que tratan de tergiversar la materialidad de los hechos y cualquier sionista reacciona de manera muy violenta llamando "antisemita" a quien los cuestione; gastan millones de dólares alrededor del mundo para financiar gobiernos, medios de comunicación para sostener su discurso.
+                      El sionismo se sustenta en la <strong className="text-orange-600">supremacía racial a través de la religión</strong>, pues sostiene que los judíos son el pueblo elegido de Dios por tanto, tienen el derecho de ocupar Palestina, &ldquo;el lugar sagrado prometido por Dios&rdquo;; promueve una enorme victimización, sustentada en discursos desquiciantes que tratan de tergiversar la materialidad de los hechos y cualquier sionista reacciona de manera muy violenta llamando &ldquo;antisemita&rdquo; a quien los cuestione; gastan millones de dólares alrededor del mundo para financiar gobiernos, medios de comunicación para sostener su discurso.
                     </p>
                     
                     <p>
@@ -603,11 +603,11 @@ export default function HomePage() {
                     </p>
                     
                     <p>
-                      Entre las propagandas más sonadas de los sionistas es que Hamas es un grupo terrorista, pero si lo pensamos un poco, ¿no será acaso un <strong className="text-emerald-600">movimiento de resistencia, un movimiento de liberación</strong>?, ¿acaso es no están en su derecho de defenderse? Ha cometido actos violentos, si, eso es innegable, pero pareciera que los palestinos no tienen derecho a decir "basta".
+                      Entre las propagandas más sonadas de los sionistas es que Hamas es un grupo terrorista, pero si lo pensamos un poco, ¿no será acaso un <strong className="text-emerald-600">movimiento de resistencia, un movimiento de liberación</strong>?, ¿acaso es no están en su derecho de defenderse? Ha cometido actos violentos, si, eso es innegable, pero pareciera que los palestinos no tienen derecho a decir &ldquo;basta&rdquo;.
                     </p>
                     
                     <p>
-                      Se les responsabiliza de su tragedia como si ellos lo hubieran provocado cuando se les castiga de manera brutal, para no cuestionar el actuar de los sionistas. Y se ha tergiversado tanto este tema en el sentido de "argumentar" que es un conflicto de origen bíblico, cuando el sionismo tiene poco más de 100 años de existencia y el estado de Israel se formó por una votación cuestionada en la ONU en 1947; y se dice "que es sin fin" por la cuestión religiosa cuando en realidad si se puede terminar, en el momento en que Israel deje de ser financiado y patrocinado por los países del norte global.
+                      Se les responsabiliza de su tragedia como si ellos lo hubieran provocado cuando se les castiga de manera brutal, para no cuestionar el actuar de los sionistas. Y se ha tergiversado tanto este tema en el sentido de &ldquo;argumentar&rdquo; que es un conflicto de origen bíblico, cuando el sionismo tiene poco más de 100 años de existencia y el estado de Israel se formó por una votación cuestionada en la ONU en 1947; y se dice &ldquo;que es sin fin&rdquo; por la cuestión religiosa cuando en realidad si se puede terminar, en el momento en que Israel deje de ser financiado y patrocinado por los países del norte global.
                     </p>
                     
                     <p>

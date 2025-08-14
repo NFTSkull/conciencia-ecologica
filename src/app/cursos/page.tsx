@@ -480,7 +480,7 @@ export default function CursosPage() {
                     ))}
                   </div>
                   <p className="text-slate-600 mb-4 italic">
-                    "{testimonial.content}"
+                    &ldquo;{testimonial.content}&rdquo;
                   </p>
                   <div>
                     <div className="font-semibold text-slate-900">{testimonial.name}</div>
