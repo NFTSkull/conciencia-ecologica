@@ -1,5 +1,6 @@
 "use client";
 
+// Página de cursos simplificada - Solo 3 cursos principales
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
