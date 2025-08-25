@@ -28,16 +28,17 @@ export default function CursosPage() {
                 <GraduationCap className="h-8 w-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold">
-                Cursos
+                Cursos Disponibles
               </h1>
             </div>
             
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 opacity-90">
-              Formación para pensar y transformar
+              Solo 3 cursos especializados disponibles
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Programas especializados diseñados para diferentes audiencias, 
-              desde adolescentes hasta público general interesado en temas ambientales.
+              Programas diseñados para adolescentes y público general interesado en temas ambientales.
+              <br />
+              <span className="text-sm opacity-75">Última actualización: {new Date().toLocaleDateString('es-MX')}</span>
             </p>
           </div>
         </div>
