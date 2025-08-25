@@ -1,6 +1,5 @@
 "use client";
 
-// Página de cursos simplificada - Solo 3 cursos principales
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -11,7 +10,6 @@ import {
   Leaf,
   Clock,
   Play,
-  Users,
   ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
@@ -28,7 +26,7 @@ export default function CursosPage() {
                 <GraduationCap className="h-8 w-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold">
-                Cursos Disponibles
+                Cursos
               </h1>
             </div>
             
@@ -37,8 +35,6 @@ export default function CursosPage() {
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Programas diseñados para adolescentes y público general interesado en temas ambientales.
-              <br />
-              <span className="text-sm opacity-75">Última actualización: {new Date().toLocaleDateString('es-MX')}</span>
             </p>
           </div>
         </div>
@@ -123,7 +119,7 @@ export default function CursosPage() {
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">
-                    En este curso de 10 sesiones aprenderás a manejarlo además de planificar tu tiempo. El cupo es limitado para garantizar la calidad de tu aprendizaje. Incluye una charla con psicólogos para dar una plática a padres de familia sobre los límites sanos a los jóvenes.
+                    En este curso de 10 sesiones aprenderás a manejarlo además de planificar tu tiempo. El cupo es limitado para garantizar la calidad de tu aprendizaje. Este curso incluye una charla con psicólogos para dar una plática a padres de familia sobre los límites sanos a los jóvenes.
                   </p>
                   <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
                     <Link href="/cursos/adolescentes/metodo-pqrst">
@@ -178,30 +174,6 @@ export default function CursosPage() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-            ¿Tienes dudas sobre los cursos?
-          </h3>
-          <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-            Estamos aquí para ayudarte a elegir el curso perfecto. 
-            Contáctanos para resolver cualquier duda o solicitar información adicional.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="/contacto">
-                Contactar para más información
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/contacto">
-                Solicitar programa personalizado
-              </Link>
-            </Button>
           </div>
         </section>
       </div>
