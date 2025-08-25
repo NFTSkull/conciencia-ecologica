@@ -5,15 +5,13 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
   GraduationCap, 
-  Users, 
   BookOpen, 
-  Target,
-  ArrowRight,
+  Brain,
+  Leaf,
   Clock,
   Play,
-  Video,
-  Leaf,
-  Brain
+  Users,
+  ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -37,17 +35,18 @@ export default function CursosPage() {
               Formación para pensar y transformar
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Dos líneas complementarias de formación: para adolescentes (habilidades base y pensamiento crítico) y académica/profesional (temas especializados).
+              Programas especializados diseñados para diferentes audiencias, 
+              desde adolescentes hasta público general interesado en temas ambientales.
             </p>
           </div>
         </div>
       </section>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Cursos Destacados */}
+        {/* Cursos Disponibles */}
         <section className="mb-16">
           <h3 className="text-2xl font-semibold text-slate-900 mb-8 text-center">
-            Cursos Destacados
+            Cursos Disponibles
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Taller de Lectura para Jóvenes */}
@@ -65,7 +64,7 @@ export default function CursosPage() {
                   Taller de Lectura para Jóvenes
                 </CardTitle>
                 <CardDescription className="text-slate-600">
-                  Aumenta tu comprensión lectora, expresión oral y gusto por la lectura con textos divertidos y dinámicos.
+                  Taller de lectura para jóvenes de entre 12 y 18 años. Buscamos que aumenten su comprensión lectora, su comprensión y su expresión oral a través de lecturas divertidas y que estamos seguros que les fascinará.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -80,7 +79,7 @@ export default function CursosPage() {
                       4 meses
                     </span>
                   </div>
-                  <p className="font-semibold text-lime-700">$1,000 MXN por mes</p>
+                  <p className="font-semibold text-lime-700">$1,000 por mes</p>
                   <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
                     <Link href="/cursos/adolescentes/taller-lectura">
                       Inscribirme ahora
@@ -103,10 +102,10 @@ export default function CursosPage() {
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
-                  Método PQRST: Comprensión y retención efectiva
+                  Método PQRST
                 </CardTitle>
                 <CardDescription className="text-slate-600">
-                  Aprende una técnica probada para estudiar mejor, planificar tu tiempo y retener información.
+                  Una técnica de estudio que ofrece varias ventajas para mejorar la comprensión y retención de información. Estas ventajas incluyen una mejor comprensión del material, facilitación de la memoria a largo plazo, optimización del tiempo de estudio y una estructura clara para el aprendizaje.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -121,7 +120,9 @@ export default function CursosPage() {
                       10 sesiones
                     </span>
                   </div>
-                  <p className="font-semibold text-lime-700">$2,500 MXN (curso completo)</p>
+                  <p className="text-sm text-slate-600 mb-2">
+                    En este curso de 10 sesiones aprenderás a manejarlo además de planificar tu tiempo. El cupo es limitado para garantizar la calidad de tu aprendizaje. Incluye una charla con psicólogos para dar una plática a padres de familia sobre los límites sanos a los jóvenes.
+                  </p>
                   <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
                     <Link href="/cursos/adolescentes/metodo-pqrst">
                       Reservar lugar
@@ -140,14 +141,14 @@ export default function CursosPage() {
                     <Leaf className="h-6 w-6 text-teal-600" />
                   </div>
                   <Badge variant="outline" className="bg-teal-100 text-teal-800 border-teal-200">
-                    Académica
+                    Público General
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
                   Curso de Educación Ambiental
                 </CardTitle>
                 <CardDescription className="text-slate-600">
-                  Una visión alternativa del ambientalismo, el metabolismo social y los retos actuales.
+                  Este curso está dirigido al público en general que desee aprender otra visión alternativa a las tradicionales. Se analizarán las corrientes del ambientalismo; lo que es metabolismo social y sus impactos en las sociedades actuales y qué alternativas se pueden crear como alternativas al capitalismo.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -162,7 +163,10 @@ export default function CursosPage() {
                       3 meses
                     </span>
                   </div>
-                  <p className="font-semibold text-teal-700">$1,000 MXN por mes</p>
+                  <p className="text-sm text-slate-600 mb-2">
+                    Se dará constancia de participación. La duración es de 3 meses y el costo por mes es de $1,000.
+                  </p>
+                  <p className="font-semibold text-teal-700">$1,000 por mes</p>
                   <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
                     <Link href="/cursos/academica/educacion-ambiental">
                       Inscribirme
@@ -174,95 +178,6 @@ export default function CursosPage() {
             </Card>
           </div>
         </section>
-
-        {/* Bloques de Cursos */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Cursos para Adolescentes */}
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-lime-100 rounded-lg">
-                  <Users className="h-6 w-6 text-lime-600" />
-                </div>
-                <CardTitle className="text-2xl">Adolescentes</CardTitle>
-              </div>
-              <CardDescription className="text-lg">
-                Capacitaciones para despertar curiosidad científica y fortalecer habilidades fundamentales.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-2">Líneas de formación:</h4>
-                  <ul className="space-y-2 text-slate-700">
-                    <li className="flex items-center gap-2">
-                      <BookOpen className="h-4 w-4 text-lime-600" />
-                      Lectura comprensiva y expresión oral
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Brain className="h-4 w-4 text-lime-600" />
-                      Técnicas de estudio y PQRST
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Target className="h-4 w-4 text-lime-600" />
-                      Pensamiento crítico y ciencias
-                    </li>
-                  </ul>
-                </div>
-
-                <Button className="w-full" asChild>
-                  <Link href="/cursos/adolescentes">
-                    Ver cursos para adolescentes
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Cursos Académica/Profesionales */}
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-teal-100 rounded-lg">
-                  <GraduationCap className="h-6 w-6 text-teal-600" />
-                </div>
-                <CardTitle className="text-2xl">Académica/Profesionales</CardTitle>
-              </div>
-              <CardDescription className="text-lg">
-                Programas para profesionales y estudiantes avanzados interesados en feminismo, ecología y ciencias híbridas.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-2">Temas especializados:</h4>
-                  <ul className="space-y-2 text-slate-700">
-                    <li className="flex items-center gap-2">
-                      <Leaf className="h-4 w-4 text-teal-600" />
-                      Educación ambiental y metabolismo social
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Users className="h-4 w-4 text-teal-600" />
-                      Feminismo y ciencia
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Target className="h-4 w-4 text-teal-600" />
-                      Ciencias híbridas (inter/transdisciplinarias)
-                    </li>
-                  </ul>
-                </div>
-
-                <Button className="w-full" asChild>
-                  <Link href="/cursos/academica">
-                    Ver cursos académicos
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
 
         {/* CTA Section */}
         <section className="mt-16 text-center">
