@@ -1,3 +1,18 @@
+"use client";
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { 
+  GraduationCap, 
+  BookOpen, 
+  Clock,
+  Play,
+  Users,
+  ArrowRight
+} from 'lucide-react';
+import Link from 'next/link';
+
 // Datos de ejemplo para cursos académicos/profesionales
 const cursosAcademicos = [
   {
@@ -355,3 +370,83 @@ const cursosAcademicos = [
     ]
   }
 ];
+
+export default function CursosAcademicosPage() {
+  return (
+    <div>
+      {/* Banner Section */}
+      <section className="bg-gradient-to-br from-teal-700 via-sky-600 to-teal-600 py-20 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm mr-4">
+                <GraduationCap className="h-8 w-8 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold">
+                Cursos Académicos
+              </h1>
+            </div>
+            
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 opacity-90">
+              Para profesionales y adultos
+            </h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Cursos especializados en feminismo, ecología y ciencias híbridas para formar profesionales comprometidos con la sustentabilidad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Lista de Cursos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {cursosAcademicos.map((curso) => (
+            <Card key={curso.id} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 bg-teal-100 rounded-lg">
+                    <BookOpen className="h-6 w-6 text-teal-600" />
+                  </div>
+                  <Badge variant="outline" className="bg-teal-100 text-teal-800 border-teal-200">
+                    {curso.audiencia === 'academica' ? 'Académico' : 'Profesional'}
+                  </Badge>
+                </div>
+                <CardTitle className="text-xl text-slate-900 mb-2">
+                  {curso.titulo}
+                </CardTitle>
+                <CardDescription className="text-slate-600">
+                  {curso.resumen}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 text-sm text-slate-600">
+                    <span className="flex items-center gap-1">
+                      <Play className="h-3 w-3" />
+                      {curso.modalidad === 'en_vivo' ? 'En vivo' : curso.modalidad === 'grabado' ? 'Grabado' : 'Híbrido'}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      {curso.duracion}
+                    </span>
+                  </div>
+                  {curso.precio_mxn > 0 ? (
+                    <p className="font-semibold text-teal-700">${curso.precio_mxn.toLocaleString()} MXN</p>
+                  ) : (
+                    <p className="text-sm text-slate-600">Gratuito</p>
+                  )}
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
+                    <Link href={`/cursos/academica/${curso.slug}`}>
+                      Ver detalles
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

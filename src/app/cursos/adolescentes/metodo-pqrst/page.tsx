@@ -17,7 +17,7 @@ import {
   Lightbulb,
   GraduationCap,
   FileText,
-  Psychology,
+  UserCheck,
   BookOpen,
   Timer
 } from 'lucide-react';
@@ -206,7 +206,7 @@ export default function MetodoPQRSTPage() {
             <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="text-2xl text-slate-900 mb-4 flex items-center gap-2">
-                  <Psychology className="h-6 w-6 text-lime-600" />
+                  <UserCheck className="h-6 w-6 text-lime-600" />
                   Características especiales del curso
                 </CardTitle>
               </CardHeader>
@@ -214,8 +214,8 @@ export default function MetodoPQRSTPage() {
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="text-center p-4 border border-lime-200 rounded-lg bg-lime-50">
-                      <Psychology className="h-12 w-12 text-lime-600 mx-auto mb-3" />
-                      <h4 className="font-semibold text-slate-900 mb-2">Charla con Psicólogos</h4>
+                      <UserCheck className="h-12 w-12 text-lime-600 mx-auto mb-3" />
+                      <h4 className="text-slate-900 mb-2">Charla con Psicólogos</h4>
                       <p className="text-sm text-slate-600">
                         Sesión especializada para padres sobre límites sanos y acompañamiento académico
                       </p>

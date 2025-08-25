@@ -274,3 +274,4 @@ SELECT
 FROM cursos 
 WHERE slug IN ('taller-lectura', 'metodo-pqrst', 'educacion-ambiental')
 ORDER BY audiencia, titulo;
+

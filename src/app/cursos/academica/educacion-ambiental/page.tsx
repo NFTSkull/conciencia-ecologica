@@ -395,7 +395,7 @@ export default function EducacionAmbientalPage() {
                       <p className="text-slate-600">No, el curso está diseñado para personas con diferentes niveles de conocimiento. Partimos de conceptos básicos.</p>
                     </div>
                     <div>
-                      <h4 className="font-medium text-slate-900 mb-2">¿Qué significa "metabolismo social"?</h4>
+                      <h4 className="font-medium text-slate-900 mb-2">¿Qué significa &quot;metabolismo social&quot;?</h4>
                       <p className="text-slate-600">Es el estudio de cómo las sociedades consumen y transforman recursos materiales y energéticos.</p>
                     </div>
                     <div>
@@ -438,3 +438,4 @@ export default function EducacionAmbientalPage() {
     </div>
   );
 }
+
