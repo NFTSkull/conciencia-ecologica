@@ -121,6 +121,7 @@ export default function CursosPage() {
                   <p className="text-sm text-slate-600 mb-2">
                     En este curso de 10 sesiones aprenderás a manejarlo además de planificar tu tiempo. El cupo es limitado para garantizar la calidad de tu aprendizaje. Este curso incluye una charla con psicólogos para dar una plática a padres de familia sobre los límites sanos a los jóvenes.
                   </p>
+                  <p className="font-semibold text-lime-700">$1,000 por mes</p>
                   <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
                     <Link href="/cursos/adolescentes/metodo-pqrst">
                       Reservar lugar
