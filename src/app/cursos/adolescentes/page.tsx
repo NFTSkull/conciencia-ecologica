@@ -461,7 +461,7 @@ export default function CursosAdolescentesPage() {
   return (
     <div>
       {/* Banner Section */}
-      <section className="bg-gradient-to-br from-lime-600 via-emerald-500 to-teal-600 py-20 text-white">
+      <section className="bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600 py-20 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
@@ -477,7 +477,7 @@ export default function CursosAdolescentesPage() {
               Desarrolla el pensamiento crítico
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Programas especializados en lectura, matemáticas y ciencias para jóvenes de 12 a 18 años.
+              En esta sección de cursos está enfocado para adolescentes, con el propósito de generar en ellos, el inicio del pensamiento crítico. Se darán capacitaciones en lectura, matemáticas y ciencias en general.
             </p>
           </div>
         </div>
@@ -487,13 +487,13 @@ export default function CursosAdolescentesPage() {
         {/* Lista de Cursos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cursosAdolescentes.map((curso) => (
-            <Card key={curso.id} className="hover:shadow-lg transition-shadow">
+            <Card key={curso.id} className="hover:shadow-lg transition-shadow border-purple-200">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-lime-100 rounded-lg">
-                    <BookOpen className="h-6 w-6 text-lime-600" />
+                  <div className="p-3 bg-purple-100 rounded-lg">
+                    <BookOpen className="h-6 w-6 text-purple-600" />
                   </div>
-                  <Badge variant="outline" className="bg-lime-100 text-lime-800 border-lime-200">
+                  <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
                     Adolescentes
                   </Badge>
                 </div>
@@ -517,7 +517,7 @@ export default function CursosAdolescentesPage() {
                     </span>
                   </div>
                   {curso.precio_mxn > 0 ? (
-                    <p className="font-semibold text-lime-700">${curso.precio_mxn.toLocaleString()} MXN</p>
+                    <p className="font-semibold text-purple-700">${curso.precio_mxn.toLocaleString()} MXN</p>
                   ) : (
                     <p className="text-sm text-slate-600">Gratuito</p>
                   )}

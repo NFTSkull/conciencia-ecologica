@@ -391,7 +391,7 @@ export default function CursosAcademicosPage() {
               Para profesionales y adultos
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Cursos especializados en feminismo, ecología y ciencias híbridas para formar profesionales comprometidos con la sustentabilidad.
+              En esta sección académica netamente se dan cursos para profesionales y adultos, que quieran aprender temas relacionados con el feminismo, ecología y ciencias híbridas.
             </p>
           </div>
         </div>
@@ -401,13 +401,13 @@ export default function CursosAcademicosPage() {
         {/* Lista de Cursos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cursosAcademicos.map((curso) => (
-            <Card key={curso.id} className="hover:shadow-lg transition-shadow">
+            <Card key={curso.id} className="hover:shadow-lg transition-shadow border-orange-200">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-teal-100 rounded-lg">
-                    <BookOpen className="h-6 w-6 text-teal-600" />
+                  <div className="p-3 bg-orange-100 rounded-lg">
+                    <BookOpen className="h-6 w-6 text-orange-600" />
                   </div>
-                  <Badge variant="outline" className="bg-teal-100 text-teal-800 border-teal-200">
+                  <Badge variant="outline" className="bg-orange-100 text-orange-800 border-orange-200">
                     {curso.audiencia === 'academica' ? 'Académico' : 'Profesional'}
                   </Badge>
                 </div>
@@ -431,7 +431,7 @@ export default function CursosAcademicosPage() {
                     </span>
                   </div>
                   {curso.precio_mxn > 0 ? (
-                    <p className="font-semibold text-teal-700">${curso.precio_mxn.toLocaleString()} MXN</p>
+                    <p className="font-semibold text-orange-700">${curso.precio_mxn.toLocaleString()} MXN</p>
                   ) : (
                     <p className="text-sm text-slate-600">Gratuito</p>
                   )}
