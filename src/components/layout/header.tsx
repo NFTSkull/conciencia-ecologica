@@ -27,7 +27,7 @@ export function Header() {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-600">
               <Leaf className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-slate-900">Conciencia Ecológica</span>
+            <span className="text-xl font-bold text-slate-900">IEAPC</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -75,18 +75,18 @@ export default function HomePage() {
                 </div>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-emerald-800 to-teal-700 bg-clip-text text-transparent">
-                Conciencia Ecológica
+                IEAPC
               </h1>
             </div>
             
             {/* Subtitle */}
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-slate-700 max-w-4xl mx-auto leading-relaxed">
-              <span className="text-emerald-700 font-bold">Investigación de vanguardia</span> para un futuro urbano sostenible
+              <span className="text-emerald-700 font-bold">Instituto de Estudios Ambientales y Pensamiento Crítico</span> para un futuro urbano sostenible
             </h2>
             
             {/* Description */}
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Estudio la <strong className="text-emerald-700">sustentabilidad</strong> y la <strong className="text-teal-700">termodinámica urbana</strong> para entender 
+              Somos un instituto dedicado al estudio de la <strong className="text-emerald-700">sustentabilidad</strong> y la <strong className="text-teal-700">termodinámica urbana</strong> para entender 
               el metabolismo social y proponer estrategias públicas y ciudadanas que mejoren la vida en las ciudades.
             </p>
             

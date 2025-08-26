@@ -37,10 +37,10 @@ export default function ConexionesPage() {
             </div>
             
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 opacity-95 leading-tight">
-              Construyendo Redes para el Cambio Social
+              IEAPC: Construyendo Redes para el Cambio Social
             </h2>
             <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-              Conectamos iniciativas, compartimos conocimiento y formamos alianzas estratégicas para transformar la realidad ambiental y social de nuestro tiempo.
+              Como Instituto de Estudios Ambientales y Pensamiento Crítico, conectamos iniciativas, compartimos conocimiento y formamos alianzas estratégicas para transformar la realidad ambiental y social de nuestro tiempo.
             </p>
           </div>
         </div>
@@ -51,10 +51,10 @@ export default function ConexionesPage() {
         <section className="text-center mb-16">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-slate-900 mb-6">
-              Un Ecosistema de Transformación
+              IEAPC: Un Ecosistema de Transformación
             </h3>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Nuestras tres entidades trabajan de manera sinérgica para crear un impacto integral: 
+              Como Instituto de Estudios Ambientales y Pensamiento Crítico, nuestras tres entidades trabajan de manera sinérgica para crear un impacto integral: 
               desde la divulgación crítica hasta la formación académica, pasando por la colaboración creativa. 
               Cada conexión representa un pilar fundamental en nuestra misión de construir un futuro más justo y sustentable.
             </p>
