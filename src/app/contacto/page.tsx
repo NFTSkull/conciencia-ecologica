@@ -343,7 +343,7 @@ export default function ContactoPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <Button asChild className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white">
-                  <a href="https://www.instagram.com/pluma.ecosocial20?igsh=MXQwbjV5M3l1OTl6dQ==" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/sede.curiosa?igsh=MTFtd3o5NXV1dnpqbA==" target="_blank" rel="noopener noreferrer">
                     <Instagram className="h-4 w-4 mr-2" />
                     Seguir en Instagram
                   </a>

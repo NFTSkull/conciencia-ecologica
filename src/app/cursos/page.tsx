@@ -11,7 +11,8 @@ import {
   Clock,
   Play,
   ArrowRight,
-  Facebook
+  Facebook,
+  Instagram
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -42,12 +43,17 @@ export default function CursosPage() {
       </section>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Cursos Disponibles */}
+        {/* Cursos para Adolescentes */}
         <section className="mb-16">
-          <h3 className="text-2xl font-semibold text-slate-900 mb-8 text-center">
-            Cursos Disponibles
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-semibold text-slate-900 mb-4">
+              Cursos para Adolescentes
+            </h3>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Programas especializados diseñados para jóvenes de entre 12 y 18 años, enfocados en el desarrollo de habilidades de lectura, estudio y pensamiento crítico.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Taller de Lectura para Jóvenes */}
             <Card className="hover:shadow-lg transition-shadow border-lime-200">
               <CardHeader>
@@ -132,7 +138,20 @@ export default function CursosPage() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </section>
 
+        {/* Cursos para Público General */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-semibold text-slate-900 mb-4">
+              Cursos para Público General
+            </h3>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Programas dirigidos a adultos, profesionales y público en general interesado en temas ambientales, sustentabilidad y pensamiento crítico.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Educación Ambiental */}
             <Card className="hover:shadow-lg transition-shadow border-teal-200">
               <CardHeader>
@@ -190,7 +209,13 @@ export default function CursosPage() {
                 Síguenos en nuestras redes sociales para conocer más sobre nuestros proyectos y colaboraciones
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex justify-center">
+            <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white">
+                <a href="https://www.instagram.com/sede.curiosa?igsh=MTFtd3o5NXV1dnpqbA==" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="h-4 w-4 mr-2" />
+                  Seguir en Instagram
+                </a>
+              </Button>
               <Button asChild className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white">
                 <a href="https://www.facebook.com/share/19PnofUbDh/" target="_blank" rel="noopener noreferrer">
                   <Facebook className="h-4 w-4 mr-2" />
