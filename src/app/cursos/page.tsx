@@ -54,7 +54,7 @@ export default function CursosPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Taller de Lectura para Jóvenes */}
+            {/* Curso de Educación Ambiental para jóvenes */}
             <Card className="hover:shadow-lg transition-shadow border-lime-200">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
@@ -66,10 +66,10 @@ export default function CursosPage() {
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
-                  Taller de Lectura para Jóvenes
+                  Curso de Educación Ambiental para jóvenes
                 </CardTitle>
                 <CardDescription className="text-slate-600">
-                  Taller de lectura para jóvenes de entre 12 y 18 años. Buscamos que aumenten su comprensión lectora, su comprensión y su expresión oral a través de lecturas divertidas y que estamos seguros que les fascinará.
+                  A partir de 12 años · Virtual · Duración 2 meses · Cupo 20.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -77,64 +77,30 @@ export default function CursosPage() {
                   <div className="flex items-center gap-4 text-sm text-slate-600">
                     <span className="flex items-center gap-1">
                       <Play className="h-3 w-3" />
-                      En vivo
+                      Virtual
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock className="h-3 w-3" />
-                      4 meses
-                    </span>
-                  </div>
-                  <p className="font-semibold text-lime-700">$1,000 por mes</p>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
-                    <Link href="/cursos/adolescentes/taller-lectura">
-                      Inscribirme ahora
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Método PQRST */}
-            <Card className="hover:shadow-lg transition-shadow border-lime-200">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-lime-100 rounded-lg">
-                    <Brain className="h-6 w-6 text-lime-600" />
-                  </div>
-                  <Badge variant="outline" className="bg-lime-100 text-lime-800 border-lime-200">
-                    Adolescentes
-                  </Badge>
-                </div>
-                <CardTitle className="text-xl text-slate-900 mb-2">
-                  Método PQRST
-                </CardTitle>
-                <CardDescription className="text-slate-600">
-                  Una técnica de estudio que ofrece varias ventajas para mejorar la comprensión y retención de información. Estas ventajas incluyen una mejor comprensión del material, facilitación de la memoria a largo plazo, optimización del tiempo de estudio y una estructura clara para el aprendizaje.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4 text-sm text-slate-600">
-                    <span className="flex items-center gap-1">
-                      <Play className="h-3 w-3" />
-                      En vivo
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="h-3 w-3" />
-                      10 sesiones
+                      2 meses
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">
-                    En este curso de 10 sesiones aprenderás a manejarlo además de planificar tu tiempo. El cupo es limitado para garantizar la calidad de tu aprendizaje. Este curso incluye una charla con psicólogos para dar una plática a padres de familia sobre los límites sanos a los jóvenes.
+                    A partir de 12 años · Virtual · 2 meses · Cupo 20
                   </p>
-                  <p className="font-semibold text-lime-700">$1,000 por mes</p>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
-                    <Link href="/cursos/adolescentes/metodo-pqrst">
-                      Reservar lugar
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
+                  <p className="font-semibold text-lime-700">$700 MXN por mes</p>
+                  <div className="flex gap-2">
+                    <Button className="flex-1 bg-emerald-600 hover:bg-emerald-700" asChild>
+                      <Link href="/cursos/adolescentes/educacion-ambiental-jovenes">
+                        Regístrate ahora
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button variant="outline" className="flex-1" asChild>
+                      <a href="https://wa.me/527221568869" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -152,7 +118,7 @@ export default function CursosPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Educación Ambiental */}
+            {/* Metabolismo social y urbano */}
             <Card className="hover:shadow-lg transition-shadow border-teal-200">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
@@ -164,10 +130,10 @@ export default function CursosPage() {
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
-                  Curso de Educación Ambiental
+                  Metabolismo social y urbano
                 </CardTitle>
                 <CardDescription className="text-slate-600">
-                  Este curso está dirigido al público en general que desee aprender otra visión alternativa a las tradicionales. Se analizarán las corrientes del ambientalismo; lo que es metabolismo social y sus impactos en las sociedades actuales y qué alternativas se pueden crear como alternativas al capitalismo.
+                  Curso virtual dirigido al público en general. Duración 1.5 meses. Cupo limitado a 20 personas.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -175,23 +141,81 @@ export default function CursosPage() {
                   <div className="flex items-center gap-4 text-sm text-slate-600">
                     <span className="flex items-center gap-1">
                       <Play className="h-3 w-3" />
-                      En vivo
+                      Virtual
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock className="h-3 w-3" />
-                      3 meses
+                      1.5 meses
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">
-                    Se dará constancia de participación. La duración es de 3 meses y el costo por mes es de $1,000.
+                    Público en general · Virtual · 1.5 meses · Cupo 20
                   </p>
-                  <p className="font-semibold text-teal-700">$1,000 por mes</p>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700" asChild>
-                    <Link href="/cursos/academica/educacion-ambiental">
-                      Inscribirme
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
+                  <p className="font-semibold text-teal-700">$600 MXN (curso completo)</p>
+                  <div className="flex gap-2">
+                    <Button className="flex-1 bg-emerald-600 hover:bg-emerald-700" asChild>
+                      <Link href="/cursos/academica/metabolismo-social-urbano">
+                        Inscribirme
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button variant="outline" className="flex-1" asChild>
+                      <a href="https://wa.me/527221568869" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Curso de Educación Ambiental para jóvenes */}
+            <Card className="hover:shadow-lg transition-shadow border-lime-200">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 bg-lime-100 rounded-lg">
+                    <BookOpen className="h-6 w-6 text-lime-600" />
+                  </div>
+                  <Badge variant="outline" className="bg-lime-100 text-lime-800 border-lime-200">
+                    Adolescentes
+                  </Badge>
+                </div>
+                <CardTitle className="text-xl text-slate-900 mb-2">
+                  Curso de Educación Ambiental para jóvenes
+                </CardTitle>
+                <CardDescription className="text-slate-600">
+                  A partir de 12 años · Virtual · Duración 2 meses · Cupo 20.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 text-sm text-slate-600">
+                    <span className="flex items-center gap-1">
+                      <Play className="h-3 w-3" />
+                      Virtual
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      2 meses
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-600 mb-2">
+                    A partir de 12 años · Virtual · 2 meses · Cupo 20
+                  </p>
+                  <p className="font-semibold text-lime-700">$700 MXN por mes</p>
+                  <div className="flex gap-2">
+                    <Button className="flex-1 bg-emerald-600 hover:bg-emerald-700" asChild>
+                      <Link href="/cursos/adolescentes/educacion-ambiental-jovenes">
+                        Regístrate ahora
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button variant="outline" className="flex-1" asChild>
+                      <a href="https://wa.me/527221568869" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
