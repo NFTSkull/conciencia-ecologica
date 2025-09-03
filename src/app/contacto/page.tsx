@@ -16,7 +16,10 @@ import {
   Users,
   BookOpen,
   Globe,
-  Building2
+  Building2,
+  Instagram,
+  Facebook,
+  MessageCircle
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -310,6 +313,97 @@ export default function ContactoPage() {
                 Iniciar conversación
               </a>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Redes Sociales */}
+      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-slate-900 mb-4">
+              Nuestras Redes y Conexiones
+            </h2>
+            <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+              Conecta con nuestras diferentes iniciativas y proyectos a través de sus redes sociales oficiales.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Pluma Ecosocial */}
+            <Card className="border-emerald-200 bg-white shadow-lg">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 p-3 bg-emerald-100 rounded-full w-16 h-16 flex items-center justify-center">
+                  <BookOpen className="h-8 w-8 text-emerald-600" />
+                </div>
+                <CardTitle className="text-xl text-emerald-800">Pluma Ecosocial</CardTitle>
+                <CardDescription className="text-emerald-700">
+                  Nuestro blog principal con reflexiones sobre ecología, justicia social y pensamiento crítico.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <Button asChild className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white">
+                  <a href="https://www.instagram.com/pluma.ecosocial20?igsh=MXQwbjV5M3l1OTl6dQ==" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="h-4 w-4 mr-2" />
+                    Seguir en Instagram
+                  </a>
+                </Button>
+                <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white">
+                  <a href="https://www.facebook.com/profile.php?id=61579210782776" target="_blank" rel="noopener noreferrer">
+                    <Facebook className="h-4 w-4 mr-2" />
+                    Seguir en Facebook
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* La Sede Curiosa */}
+            <Card className="border-lime-200 bg-white shadow-lg">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 p-3 bg-lime-100 rounded-full w-16 h-16 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-lime-600" />
+                </div>
+                <CardTitle className="text-xl text-lime-800">La Sede Curiosa</CardTitle>
+                <CardDescription className="text-lime-700">
+                  Espacio de encuentro y colaboración para proyectos innovadores y pensamiento creativo.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white">
+                  <a href="https://www.facebook.com/share/19PnofUbDh/" target="_blank" rel="noopener noreferrer">
+                    <Facebook className="h-4 w-4 mr-2" />
+                    Seguir en Facebook
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Instituto de Estudios Ambientales */}
+            <Card className="border-teal-200 bg-white shadow-lg">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 p-3 bg-teal-100 rounded-full w-16 h-16 flex items-center justify-center">
+                  <Building2 className="h-8 w-8 text-teal-600" />
+                </div>
+                <CardTitle className="text-xl text-teal-800">Instituto de Estudios Ambientales</CardTitle>
+                <CardDescription className="text-teal-700">
+                  Centro de investigación y formación en temas ambientales, sustentabilidad y análisis crítico.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white">
+                  <a href="https://www.facebook.com/share/1Bw4Z8bvw3/" target="_blank" rel="noopener noreferrer">
+                    <Facebook className="h-4 w-4 mr-2" />
+                    Seguir en Facebook
+                  </a>
+                </Button>
+                <Button asChild className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
+                  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Contactar por WhatsApp
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

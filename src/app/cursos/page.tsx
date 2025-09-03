@@ -10,7 +10,8 @@ import {
   Leaf,
   Clock,
   Play,
-  ArrowRight
+  ArrowRight,
+  Facebook
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -31,10 +32,10 @@ export default function CursosPage() {
             </div>
             
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 opacity-90">
-              Solo 3 cursos especializados disponibles
+              La Sede Curiosa
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Programas diseñados para adolescentes y público general interesado en temas ambientales.
+              Un espacio vibrante donde la creatividad se encuentra con la innovación social. Aquí facilitamos colaboraciones entre activistas, artistas, investigadores y emprendedores que comparten la visión de un mundo más justo y sustentable.
             </p>
           </div>
         </div>
@@ -176,6 +177,28 @@ export default function CursosPage() {
               </CardContent>
             </Card>
           </div>
+        </section>
+
+        {/* Redes Sociales */}
+        <section className="mb-16">
+          <Card className="bg-gradient-to-r from-lime-50 to-emerald-50 border-lime-200">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl text-lime-800 mb-4">
+                Conecta con La Sede Curiosa
+              </CardTitle>
+              <CardDescription className="text-lime-700">
+                Síguenos en nuestras redes sociales para conocer más sobre nuestros proyectos y colaboraciones
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex justify-center">
+              <Button asChild className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white">
+                <a href="https://www.facebook.com/share/19PnofUbDh/" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="h-4 w-4 mr-2" />
+                  Seguir en Facebook
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
         </section>
       </div>
     </div>

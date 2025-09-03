@@ -21,7 +21,9 @@ import {
   Users,
   MapPin,
   Calendar,
-  Mail
+  Mail,
+  Facebook,
+  MessageCircle
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -115,12 +117,10 @@ export default function InvestigacionPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Líneas de Investigación
+              Instituto de Estudios Ambientales y Pensamiento Crítico
             </h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-              Mi investigación se centra en la <strong>sustentabilidad urbana</strong> y la 
-              <strong>termodinámica urbana</strong>, aplicando principios científicos para 
-              entender y mejorar el metabolismo de las ciudades.
+              Centro de excelencia académica que combina investigación rigurosa con formación práctica. Desarrollamos capacidades críticas y herramientas analíticas para comprender y transformar los desafíos ambientales y sociales de nuestro tiempo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="outline" asChild>
@@ -292,6 +292,36 @@ export default function InvestigacionPage() {
               </Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Redes Sociales */}
+      <section className="py-16 bg-emerald-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Card className="bg-white border-emerald-200 max-w-2xl mx-auto">
+            <CardHeader>
+              <CardTitle className="text-2xl text-emerald-800 mb-4">
+                Conecta con el Instituto
+              </CardTitle>
+              <CardDescription className="text-emerald-700">
+                Síguenos en nuestras redes sociales para conocer más sobre nuestras investigaciones y proyectos
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white">
+                <a href="https://www.facebook.com/share/1Bw4Z8bvw3/" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="h-4 w-4 mr-2" />
+                  Seguir en Facebook
+                </a>
+              </Button>
+              <Button asChild className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white">
+                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="h-4 w-4 mr-2" />
+                  Contactar por WhatsApp
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

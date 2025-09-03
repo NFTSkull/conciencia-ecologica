@@ -2,7 +2,8 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, User } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Calendar, Clock, User, Instagram, Facebook } from 'lucide-react';
 
 export default function BlogPage() {
   return (
@@ -12,10 +13,10 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Blog
+              Pluma Ecosocial
             </h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Reflexiones, análisis y pensamiento crítico sobre ecología, justicia social y conciencia global.
+              Nuestro blog principal que combina el rigor académico con la accesibilidad del lenguaje cotidiano. Aquí compartimos análisis profundos sobre ecología, justicia social y pensamiento crítico, conectando teoría y práctica para inspirar acción.
             </p>
           </div>
         </div>
@@ -129,6 +130,34 @@ export default function BlogPage() {
             </CardContent>
           </Card>
         </article>
+
+        {/* Redes Sociales */}
+        <section className="max-w-4xl mx-auto mb-12">
+          <Card className="bg-gradient-to-r from-emerald-50 to-teal-50 border-emerald-200">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl text-emerald-800 mb-4">
+                Síguenos en nuestras redes sociales
+              </CardTitle>
+              <CardDescription className="text-emerald-700">
+                Mantente conectado con Pluma Ecosocial para más análisis y reflexiones
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white">
+                <a href="https://www.instagram.com/pluma.ecosocial20?igsh=MXQwbjV5M3l1OTl6dQ==" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="h-4 w-4 mr-2" />
+                  Seguir en Instagram
+                </a>
+              </Button>
+              <Button asChild className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white">
+                <a href="https://www.facebook.com/profile.php?id=61579210782776" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="h-4 w-4 mr-2" />
+                  Seguir en Facebook
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </section>
 
         {/* Artículos Relacionados */}
         <section className="max-w-4xl mx-auto">
