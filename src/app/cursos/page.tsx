@@ -54,7 +54,7 @@ export default function CursosPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Curso de Educación Ambiental para jóvenes */}
+            {/* Taller de Lectura */}
             <Card className="hover:shadow-lg transition-shadow border-lime-200">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
@@ -62,14 +62,65 @@ export default function CursosPage() {
                     <BookOpen className="h-6 w-6 text-lime-600" />
                   </div>
                   <Badge variant="outline" className="bg-lime-100 text-lime-800 border-lime-200">
-                    Adolescentes
+                    La Sede Curiosa
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
-                  Curso de Educación Ambiental para jóvenes
+                  Taller de lectura
                 </CardTitle>
                 <CardDescription className="text-slate-600">
-                  A partir de 12 años · Virtual · Duración 2 meses · Cupo 20.
+                  Taller que ayudará a nuestros estudiantes a mejorar la comprensión lectora, expresión oral y fomentar el gusto por la lectura con material didáctico.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 text-sm text-slate-600">
+                    <span className="flex items-center gap-1">
+                      <Play className="h-3 w-3" />
+                      Virtual
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      4 meses
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-600 mb-2">
+                    Adolescentes de 12 a 18 años · Cupo: 10 personas
+                  </p>
+                  <p className="font-semibold text-lime-700">$1,000 MXN</p>
+                  <div className="flex gap-2">
+                    <Button className="flex-1 bg-emerald-600 hover:bg-emerald-700" asChild>
+                      <Link href="/cursos/adolescentes/taller-lectura">
+                        Inscribirme ahora
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button variant="outline" className="flex-1" asChild>
+                      <a href="https://wa.me/527221568869" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Educación Ambiental para jóvenes */}
+            <Card className="hover:shadow-lg transition-shadow border-lime-200">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 bg-lime-100 rounded-lg">
+                    <Leaf className="h-6 w-6 text-lime-600" />
+                  </div>
+                  <Badge variant="outline" className="bg-lime-100 text-lime-800 border-lime-200">
+                    IEAPC
+                  </Badge>
+                </div>
+                <CardTitle className="text-xl text-slate-900 mb-2">
+                  Educación ambiental
+                </CardTitle>
+                <CardDescription className="text-slate-600">
+                  Curso destinado a jóvenes para que adquieran conocimientos básicos de educación ambiental.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -85,7 +136,7 @@ export default function CursosPage() {
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">
-                    A partir de 12 años · Virtual · 2 meses · Cupo 20
+                    Adolescentes de 12 a 18 años · Cupo: 20 personas
                   </p>
                   <p className="font-semibold text-lime-700">$700 MXN por mes</p>
                   <div className="flex gap-2">
@@ -117,7 +168,7 @@ export default function CursosPage() {
               Programas dirigidos a adultos, profesionales y público en general interesado en temas ambientales, sustentabilidad y pensamiento crítico.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Metabolismo social y urbano */}
             <Card className="hover:shadow-lg transition-shadow border-teal-200">
               <CardHeader>
@@ -126,14 +177,14 @@ export default function CursosPage() {
                     <Leaf className="h-6 w-6 text-teal-600" />
                   </div>
                   <Badge variant="outline" className="bg-teal-100 text-teal-800 border-teal-200">
-                    Público General
+                    IEAPC
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
                   Metabolismo social y urbano
                 </CardTitle>
                 <CardDescription className="text-slate-600">
-                  Curso virtual dirigido al público en general. Duración 1.5 meses. Cupo limitado a 20 personas.
+                  Curso orientado al entendimiento del metabolismo social y urbano y su relación con ecología, capital y propuestas alternativas.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -149,9 +200,9 @@ export default function CursosPage() {
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">
-                    Público en general · Virtual · 1.5 meses · Cupo 20
+                    Público en general · Cupo: 20 personas
                   </p>
-                  <p className="font-semibold text-teal-700">$600 MXN (curso completo)</p>
+                  <p className="font-semibold text-teal-700">$600 MXN</p>
                   <div className="flex gap-2">
                     <Button className="flex-1 bg-emerald-600 hover:bg-emerald-700" asChild>
                       <Link href="/cursos/academica/metabolismo-social-urbano">
@@ -169,22 +220,22 @@ export default function CursosPage() {
               </CardContent>
             </Card>
 
-            {/* Curso de Educación Ambiental para jóvenes */}
-            <Card className="hover:shadow-lg transition-shadow border-lime-200">
+            {/* Educación Ambiental para público general */}
+            <Card className="hover:shadow-lg transition-shadow border-teal-200">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-lime-100 rounded-lg">
-                    <BookOpen className="h-6 w-6 text-lime-600" />
+                  <div className="p-3 bg-teal-100 rounded-lg">
+                    <BookOpen className="h-6 w-6 text-teal-600" />
                   </div>
-                  <Badge variant="outline" className="bg-lime-100 text-lime-800 border-lime-200">
-                    Adolescentes
+                  <Badge variant="outline" className="bg-teal-100 text-teal-800 border-teal-200">
+                    IEAPC
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
-                  Curso de Educación Ambiental para jóvenes
+                  Educación ambiental
                 </CardTitle>
                 <CardDescription className="text-slate-600">
-                  A partir de 12 años · Virtual · Duración 2 meses · Cupo 20.
+                  Curso destinado al público en general que busca comprender conceptos básicos de educación ambiental, sustentabilidad e impactos socioambientales.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -200,13 +251,13 @@ export default function CursosPage() {
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">
-                    A partir de 12 años · Virtual · 2 meses · Cupo 20
+                    Público en general · Cupo: 15 personas
                   </p>
-                  <p className="font-semibold text-lime-700">$700 MXN por mes</p>
+                  <p className="font-semibold text-teal-700">$500 MXN por mes</p>
                   <div className="flex gap-2">
                     <Button className="flex-1 bg-emerald-600 hover:bg-emerald-700" asChild>
-                      <Link href="/cursos/adolescentes/educacion-ambiental-jovenes">
-                        Regístrate ahora
+                      <Link href="/cursos/academica/educacion-ambiental">
+                        Inscribirme
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>

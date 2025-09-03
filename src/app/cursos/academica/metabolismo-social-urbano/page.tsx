@@ -37,10 +37,10 @@ export default function MetabolismoSocialUrbanoPage() {
             </div>
             
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 opacity-90">
-              Público en general · Virtual · 1.5 meses · Cupo 20
+              Público en general · Virtual · 1.5 meses · Cupo: 20 personas
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Curso virtual dirigido al público en general. Duración 1.5 meses. Cupo limitado a 20 personas.
+              Curso orientado al entendimiento del metabolismo social y urbano y su relación con ecología, capital y propuestas alternativas.
             </p>
           </div>
         </div>

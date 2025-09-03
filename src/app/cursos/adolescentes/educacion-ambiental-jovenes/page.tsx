@@ -38,10 +38,10 @@ export default function EducacionAmbientalJovenesPage() {
             </div>
             
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 opacity-90">
-              A partir de 12 años · Virtual · 2 meses · Cupo 20 · $700 MXN por mes
+              Adolescentes de 12 a 18 años · Virtual · 2 meses · Cupo: 20 personas · $700 MXN por mes
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              A partir de 12 años en adelante: aprenderán una visión sólida y actual sobre el ambiente y nuestra relación con él.
+              Curso destinado a jóvenes para que adquieran conocimientos básicos de educación ambiental.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function EducacionAmbientalJovenesPage() {
                   Descripción del curso
                 </CardTitle>
                 <CardDescription className="text-lg text-slate-600">
-                  Este curso está diseñado específicamente para jóvenes a partir de 12 años, proporcionándoles una comprensión sólida y actual sobre el ambiente y nuestra relación con él, a través de metodologías adaptadas a su edad y nivel de desarrollo.
+                  Este curso está diseñado específicamente para adolescentes de 12 a 18 años, proporcionándoles conocimientos básicos de educación ambiental a través de metodologías adaptadas a su edad y nivel de desarrollo.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -77,6 +77,16 @@ export default function EducacionAmbientalJovenesPage() {
                       <span className="text-sm font-medium text-lime-600">1</span>
                     </div>
                     <div>
+                      <h3 className="font-semibold text-slate-900">Definición de Educación Ambiental</h3>
+                      <p className="text-slate-600">Conceptos fundamentales y principios de la educación ambiental</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-lime-100 mt-0.5">
+                      <span className="text-sm font-medium text-lime-600">2</span>
+                    </div>
+                    <div>
                       <h3 className="font-semibold text-slate-900">Ética ambiental</h3>
                       <p className="text-slate-600">Principios éticos para la conservación y protección del medio ambiente</p>
                     </div>
@@ -84,7 +94,7 @@ export default function EducacionAmbientalJovenesPage() {
                   
                   <div className="flex items-start gap-3">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-lime-100 mt-0.5">
-                      <span className="text-sm font-medium text-lime-600">2</span>
+                      <span className="text-sm font-medium text-lime-600">3</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900">Conflictos socioambientales en México</h3>
@@ -94,7 +104,7 @@ export default function EducacionAmbientalJovenesPage() {
                   
                   <div className="flex items-start gap-3">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-lime-100 mt-0.5">
-                      <span className="text-sm font-medium text-lime-600">3</span>
+                      <span className="text-sm font-medium text-lime-600">4</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900">Impactos humanos en el medio ambiente</h3>
@@ -104,7 +114,7 @@ export default function EducacionAmbientalJovenesPage() {
                   
                   <div className="flex items-start gap-3">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-lime-100 mt-0.5">
-                      <span className="text-sm font-medium text-lime-600">4</span>
+                      <span className="text-sm font-medium text-lime-600">5</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900">Sustentabilidad</h3>
@@ -114,7 +124,7 @@ export default function EducacionAmbientalJovenesPage() {
                   
                   <div className="flex items-start gap-3">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-lime-100 mt-0.5">
-                      <span className="text-sm font-medium text-lime-600">5</span>
+                      <span className="text-sm font-medium text-lime-600">6</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900">Alternativas de solución</h3>
@@ -138,15 +148,7 @@ export default function EducacionAmbientalJovenesPage() {
                     <Calendar className="h-5 w-5 text-lime-600 mt-0.5" />
                     <div>
                       <h3 className="font-semibold text-slate-900">Sábados de 12 a 2 PM</h3>
-                      <p className="text-slate-600">Sesiones matutinas para jóvenes que prefieren el horario de fin de semana</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Calendar className="h-5 w-5 text-lime-600 mt-0.5" />
-                    <div>
-                      <h3 className="font-semibold text-slate-900">Martes de 7 a 9 PM</h3>
-                      <p className="text-slate-600">Sesiones vespertinas para jóvenes que estudian o trabajan</p>
+                      <p className="text-slate-600">Sesión única de fin de semana</p>
                     </div>
                   </div>
                 </div>
