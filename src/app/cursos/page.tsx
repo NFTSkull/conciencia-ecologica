@@ -113,7 +113,7 @@ export default function CursosPage() {
                     <Leaf className="h-6 w-6 text-lime-600" />
                   </div>
                   <Badge variant="outline" className="bg-lime-100 text-lime-800 border-lime-200">
-                    IEAPC
+                    La Sede Curiosa
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
@@ -177,7 +177,7 @@ export default function CursosPage() {
                     <Leaf className="h-6 w-6 text-teal-600" />
                   </div>
                   <Badge variant="outline" className="bg-teal-100 text-teal-800 border-teal-200">
-                    IEAPC
+                    La Sede Curiosa
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
@@ -228,7 +228,7 @@ export default function CursosPage() {
                     <BookOpen className="h-6 w-6 text-teal-600" />
                   </div>
                   <Badge variant="outline" className="bg-teal-100 text-teal-800 border-teal-200">
-                    IEAPC
+                    La Sede Curiosa
                   </Badge>
                 </div>
                 <CardTitle className="text-xl text-slate-900 mb-2">
