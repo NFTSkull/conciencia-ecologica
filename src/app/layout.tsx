@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
-import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -60,42 +59,6 @@ export const metadata: Metadata = {
   },
 };
 
-const seoConfig = {
-  title: 'Conciencia Ecológica - Dr. Dainiz Noray Montoya García',
-  description: 'Investigación, divulgación y consultoría en ciencias ambientales. Cursos especializados y blog sobre sustentabilidad, metabolismo urbano y complejidad socio-ambiental.',
-  canonical: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  openGraph: {
-    type: 'website',
-    locale: 'es_MX',
-    url: '/',
-    title: 'Conciencia Ecológica - Dr. Dainiz Noray Montoya García',
-    description: 'Investigación, divulgación y consultoría en ciencias ambientales.',
-    siteName: 'Conciencia Ecológica',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Conciencia Ecológica',
-      },
-    ],
-  },
-  twitter: {
-    handle: '@concienciaeco',
-    site: '@concienciaeco',
-    cardType: 'summary_large_image',
-  },
-  additionalMetaTags: [
-    {
-      name: 'author',
-      content: 'Dr. Dainiz Noray Montoya García',
-    },
-    {
-      name: 'keywords',
-      content: 'ciencias ambientales, sustentabilidad, metabolismo urbano, complejidad socio-ambiental, consultoría ambiental, cursos ambientales',
-    },
-  ],
-};
 
 export default function RootLayout({
   children,
@@ -104,9 +67,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <head>
-        <DefaultSeo {...seoConfig} />
-      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
