@@ -6,19 +6,17 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://conciencia-ecologica.vercel.app',
   },
-  // Force consistent React runtime
+  // Disable all optimizations that might cause React conflicts
   experimental: {
     esmExternals: false,
   },
-  // Disable problematic optimizations
   swcMinify: false,
   compiler: {
     removeConsole: false,
   },
-  // Ensure proper JSX handling
   transpilePackages: [],
-  // Disable static generation for problematic pages
-  output: 'standalone',
+  // Force consistent React runtime
+  reactStrictMode: true,
 }
 
 module.exports = nextConfig
