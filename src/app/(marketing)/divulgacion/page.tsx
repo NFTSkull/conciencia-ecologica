@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import { SectionBanner } from '@/components/sections/section-banner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Users, Calendar, MapPin, Video, BookOpen } from 'lucide-react';
+import { ExternalLink, Users, Video, BookOpen } from 'lucide-react';
 
 // Datos de ejemplo - en producción vendrían de Supabase
 const actividadesDivulgacion = [
@@ -202,9 +203,9 @@ export default function DivulgacionPage() {
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="/cursos">
+              <Link href="/cursos">
                 Ver cursos
-              </a>
+              </Link>
             </Button>
           </div>
         </div>

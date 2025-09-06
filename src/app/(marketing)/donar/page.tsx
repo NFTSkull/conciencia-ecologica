@@ -1,7 +1,6 @@
 "use client";
 
 import { SectionBanner } from '@/components/sections/section-banner';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Users, Target, Leaf } from 'lucide-react';
 import DonationCheckout from '@/components/payments/DonationCheckout';

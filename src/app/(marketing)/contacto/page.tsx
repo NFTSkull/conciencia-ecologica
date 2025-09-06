@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Mail, MapPin, Phone, Clock, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function ContactoPage() {
@@ -57,7 +57,7 @@ export default function ContactoPage() {
       } else {
         toast.error('Error al enviar el mensaje');
       }
-    } catch (error) {
+    } catch {
       toast.error('Error de conexión');
     } finally {
       setIsLoading(false);

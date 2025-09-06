@@ -9,12 +9,7 @@ import {
   GraduationCap, 
   Leaf, 
   Heart,
-  ArrowRight,
-  Award,
-  Globe,
-  Zap,
-  Target,
-  Lightbulb
+  ArrowRight
 } from 'lucide-react';
 
 export default function HomePage() {

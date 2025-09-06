@@ -3,14 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { 
-  FileText, 
   Target, 
   BarChart3, 
   TrendingUp, 
   Leaf, 
   Building2, 
   Users, 
-  Globe,
   ExternalLink,
   Download
 } from 'lucide-react';

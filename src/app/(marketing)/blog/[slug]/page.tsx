@@ -99,20 +99,30 @@ La lucha por la igualdad y la justicia es un proceso largo y complejo, pero cada
 ];
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
   const [post, setPost] = useState<typeof posts[0] | null>(null);
   const [loading, setLoading] = useState(true);
+  const [prevPost, setPrevPost] = useState<typeof posts[0] | null>(null);
+  const [nextPost, setNextPost] = useState<typeof posts[0] | null>(null);
 
   useEffect(() => {
-    const foundPost = posts.find(p => p.slug === params.slug);
-    setPost(foundPost || null);
-    setLoading(false);
-  }, [params.slug]);
+    params.then((resolvedParams) => {
+      const foundPost = posts.find(p => p.slug === resolvedParams.slug);
+      setPost(foundPost || null);
+      
+      // Set navigation posts
+      const currentIndex = posts.findIndex(p => p.slug === resolvedParams.slug);
+      setPrevPost(currentIndex > 0 ? posts[currentIndex - 1] : null);
+      setNextPost(currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null);
+      
+      setLoading(false);
+    });
+  }, [params]);
 
   if (loading) {
     return (
@@ -142,10 +152,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       </div>
     );
   }
-
-  const currentIndex = posts.findIndex(p => p.slug === params.slug);
-  const prevPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
-  const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
 
   return (
     <div data-theme="theme-blog">

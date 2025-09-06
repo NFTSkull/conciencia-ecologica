@@ -4,18 +4,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
-  GraduationCap, 
   Users, 
   BookOpen, 
-  Clock, 
   Play, 
   Video,
   ArrowRight,
   Brain,
-  Leaf,
-  Target,
-  Lightbulb,
-  Zap
+  Leaf
 } from 'lucide-react';
 
 const cursosAdolescentes = [
@@ -220,6 +215,18 @@ export default function CursosPage() {
             </Button>
           </div>
         </div>
+
+        {/* Colaboradores Section */}
+        <section className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-semibold text-slate-900 mb-4">
+              Colaboradores en Cursos
+            </h3>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Profesionales especializados que enriquecen nuestros programas con su experiencia y conocimiento.
+            </p>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <div className="mt-20 text-center bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-12">

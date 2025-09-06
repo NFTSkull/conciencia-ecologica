@@ -1,9 +1,9 @@
+import Link from 'next/link';
 import { SectionBanner } from '@/components/sections/section-banner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
-  GraduationCap, 
   Users, 
   Brain, 
   Target, 
@@ -13,8 +13,7 @@ import {
   ArrowRight,
   BookOpen,
   Lightbulb,
-  Zap,
-  Heart
+  Zap
 } from 'lucide-react';
 import { formatCurrency } from '@/lib/utils';
 
@@ -279,9 +278,9 @@ export default function CursosAdolescentesPage() {
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="/cursos">
+              <Link href="/cursos">
                 Ver todos los cursos
-              </a>
+              </Link>
             </Button>
           </div>
         </div>

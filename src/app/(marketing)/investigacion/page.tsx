@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from 'react';
 import { SectionBanner } from '@/components/sections/section-banner';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
   BookOpen, 

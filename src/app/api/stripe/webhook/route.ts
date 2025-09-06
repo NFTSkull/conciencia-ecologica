@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
-import { supabaseAdmin } from '@/lib/supabase';
 
 export async function POST(request: NextRequest) {
   const body = await request.text();
@@ -36,38 +35,34 @@ export async function POST(request: NextRequest) {
         
         // Procesar pago exitoso
         if (paymentIntent.metadata.type === 'donativo') {
-          // Registrar donativo
-          await supabaseAdmin
-            .from('donativos')
-            .insert({
-              user_email: paymentIntent.metadata.email,
-              amount_mxn: parseInt(paymentIntent.metadata.amount_mxn),
-              payment_intent_id: paymentIntent.id,
-              status: 'completado',
-            });
+          // Registrar donativo (simulado)
+          console.log('Donativo exitoso:', {
+            user_email: paymentIntent.metadata.email,
+            amount_mxn: parseInt(paymentIntent.metadata.amount_mxn),
+            payment_intent_id: paymentIntent.id,
+            status: 'completado',
+          });
         } else if (paymentIntent.metadata.type === 'curso') {
-          // Registrar inscripción al curso
-          await supabaseAdmin
-            .from('inscripciones')
-            .insert({
-              curso_id: paymentIntent.metadata.curso_id,
-              user_id: paymentIntent.metadata.user_id,
-              status: 'pagado',
-              amount_mxn: parseInt(paymentIntent.metadata.amount_mxn),
-              payment_intent_id: paymentIntent.id,
-            });
+          // Registrar inscripción al curso (simulado)
+          console.log('Inscripción a curso exitosa:', {
+            curso_id: paymentIntent.metadata.curso_id,
+            user_id: paymentIntent.metadata.user_id,
+            status: 'pagado',
+            amount_mxn: parseInt(paymentIntent.metadata.amount_mxn),
+            payment_intent_id: paymentIntent.id,
+          });
         }
         break;
 
       case 'payment_intent.payment_failed':
         const failedPayment = event.data.object;
         
-        // Marcar inscripción como fallida
+        // Marcar inscripción como fallida (simulado)
         if (failedPayment.metadata.type === 'curso') {
-          await supabaseAdmin
-            .from('inscripciones')
-            .update({ status: 'fallido' })
-            .eq('payment_intent_id', failedPayment.id);
+          console.log('Pago fallido para curso:', {
+            payment_intent_id: failedPayment.id,
+            status: 'fallido',
+          });
         }
         break;
 

@@ -3,7 +3,7 @@
 import { SectionBanner } from '@/components/sections/section-banner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, FileText, Download, ExternalLink, Search, Filter, Calendar, Users, Target, Globe, Zap, Building2, Award, Star, ArrowRight, Mail } from 'lucide-react';
+import { BookOpen, FileText, Search, Users, Globe, Award, ArrowRight, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function PublicacionesPage() {

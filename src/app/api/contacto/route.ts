@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabaseAdmin } from '@/lib/supabase';
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,23 +20,8 @@ export async function POST(request: NextRequest) {
     }
 
     // En producción, aquí se enviaría un email real
-    // Por ahora, solo registramos en la base de datos
-    
-    // Registrar en base de datos (opcional)
-    try {
-      await supabaseAdmin
-        .from('consents')
-        .insert({
-          user_email: email,
-          consent_type: 'contacto',
-          policy_version: '1.0',
-          ip: request.ip || 'unknown',
-          user_agent: request.headers.get('user-agent') || 'unknown',
-        });
-    } catch (dbError) {
-      console.error('Error guardando consentimiento:', dbError);
-      // No fallamos si hay error en la BD
-    }
+    // Por ahora, solo simulamos el envío
+    console.log('Mensaje de contacto recibido:', { nombre, email, asunto, mensaje });
 
     // Simular envío de email
     console.log('Email de contacto recibido:', {

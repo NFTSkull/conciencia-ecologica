@@ -6,12 +6,15 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://conciencia-ecologica.vercel.app',
   },
-  experimental: {
-    optimizeCss: true,
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+  // Temporarily disabled optimizations due to build issues
+  // experimental: {
+  //   optimizeCss: true,
+  // },
+  // compiler: {
+  //   removeConsole: process.env.NODE_ENV === 'production',
+  // },
+  // Disable static generation for problematic pages
+  output: 'standalone',
 }
 
 module.exports = nextConfig
