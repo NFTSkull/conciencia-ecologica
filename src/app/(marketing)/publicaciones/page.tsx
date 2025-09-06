@@ -12,7 +12,7 @@ export default function PublicacionesPage() {
       <SectionBanner
         title="Publicaciones"
         subtitle="Artículos científicos, tesis y contribuciones académicas en sustentabilidad urbana"
-        theme="theme-research"
+        theme="theme-investigacion"
       />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">

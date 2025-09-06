@@ -51,7 +51,7 @@ export default function InvestigacionPage() {
       <SectionBanner
         title="Investigación"
         subtitle="Explorando la frontera del conocimiento en sustentabilidad urbana y metabolismo social"
-        theme="theme-research"
+        theme="theme-investigacion"
       />
 
       {/* Líneas de Investigación */}
