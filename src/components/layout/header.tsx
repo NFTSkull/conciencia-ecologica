@@ -87,32 +87,32 @@ export default function Header() {
                       isScrolled ? 'text-slate-700' : 'text-white/90'
                     }`} />
                   </div>
-                  
-                  {/* Submenu */}
-                  {activeSubmenu === item.name && item.submenu && (
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-emerald-100 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      {item.submenu.map((subitem) => (
-                        <Link
-                          key={subitem.name}
-                          href={subitem.href}
-                          className="block px-4 py-2 text-sm text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors duration-200"
-                        >
-                          {subitem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
                 ) : (
                   <Link
                     href={item.href}
                     className={`text-sm font-medium transition-colors duration-300 ${
                       isActive(item.href)
-                        ? (isScrolled ? 'text-emerald-600' : 'text-white')
-                        : (isScrolled ? 'text-slate-700 hover:text-emerald-600' : 'text-white/90 hover:text-white')
+                        ? isScrolled ? 'text-emerald-600' : 'text-white'
+                        : isScrolled ? 'text-slate-700 hover:text-emerald-600' : 'text-white/90 hover:text-white'
                     }`}
                   >
                     {item.name}
                   </Link>
+                )}
+                
+                {/* Submenu */}
+                {activeSubmenu === item.name && item.submenu && (
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-emerald-100 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    {item.submenu.map((subitem) => (
+                      <Link
+                        key={subitem.name}
+                        href={subitem.href}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors duration-200"
+                      >
+                        {subitem.name}
+                      </Link>
+                    ))}
+                  </div>
                 )}
               </div>
             ))}
@@ -120,74 +120,69 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button 
-              size="sm" 
-              variant="outline"
-              className={`transition-all duration-300 ${
-                isScrolled 
-                  ? 'border-emerald-200 text-emerald-700 hover:bg-emerald-50' 
-                  : 'border-white/30 text-white hover:bg-white/10'
-              }`}
-              asChild
-            >
-              <Link href="/cursos">
-                <GraduationCap className="mr-2 h-4 w-4" />
-                Cursos
+            <Button variant="outline" size="sm" asChild>
+              <Link href="/donar">
+                <Heart className="h-4 w-4 mr-2" />
+                Donar
               </Link>
             </Button>
-            <Button 
-              size="sm"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white transition-all duration-300 hover:scale-105"
-              asChild
-            >
-              <Link href="/donar">
-                <Heart className="mr-2 h-4 w-4" />
-                Donar
+            <Button size="sm" asChild>
+              <Link href="/cursos">
+                <GraduationCap className="h-4 w-4 mr-2" />
+                Cursos
               </Link>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${
-              isScrolled 
-                ? 'text-slate-700 hover:bg-slate-100' 
-                : 'text-white hover:bg-white/10'
-            }`}
+            className="lg:hidden p-2 rounded-lg transition-colors duration-300"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? (
+              <X className={`h-6 w-6 ${isScrolled ? 'text-slate-700' : 'text-white'}`} />
+            ) : (
+              <Menu className={`h-6 w-6 ${isScrolled ? 'text-slate-700' : 'text-white'}`} />
+            )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-xl mt-2 shadow-xl border border-emerald-100">
+          <div className="lg:hidden py-4 border-t border-emerald-100">
+            <nav className="space-y-2">
               {navigation.map((item) => (
                 <div key={item.name}>
                   {item.submenu ? (
                     <div>
-                      <div className="px-3 py-2 text-base font-medium text-slate-700">
+                      <button
+                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                        className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors duration-200"
+                      >
                         {item.name}
-                      </div>
-                      <div className="pl-4 space-y-1">
-                        {item.submenu.map((subitem) => (
-                          <Link
-                            key={subitem.name}
-                            href={subitem.href}
-                            className="block px-3 py-2 text-sm text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors duration-200"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {subitem.name}
-                          </Link>
-                        ))}
-                      </div>
+                        <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                          activeSubmenu === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      {activeSubmenu === item.name && (
+                        <div className="ml-4 space-y-1">
+                          {item.submenu.map((subitem) => (
+                            <Link
+                              key={subitem.name}
+                              href={subitem.href}
+                              className="block px-3 py-2 text-sm text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors duration-200"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {subitem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <Link
                       href={item.href}
-                      className={`block px-3 py-2 text-base font-medium rounded-lg transition-colors duration-200 ${
+                      className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                         isActive(item.href)
                           ? 'text-emerald-600 bg-emerald-50'
                           : 'text-slate-700 hover:text-emerald-600 hover:bg-emerald-50'
@@ -199,29 +194,22 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              
-              {/* Mobile CTA Buttons */}
-              <div className="pt-4 space-y-2">
-                <Button 
-                  variant="outline" 
-                  className="w-full border-emerald-200 text-emerald-700 hover:bg-emerald-50"
-                  asChild
-                >
-                  <Link href="/cursos" onClick={() => setIsOpen(false)}>
-                    <GraduationCap className="mr-2 h-4 w-4" />
-                    Cursos
-                  </Link>
-                </Button>
-                <Button 
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
-                  asChild
-                >
-                  <Link href="/donar" onClick={() => setIsOpen(false)}>
-                    <Heart className="mr-2 h-4 w-4" />
-                    Donar
-                  </Link>
-                </Button>
-              </div>
+            </nav>
+            
+            {/* Mobile CTA Buttons */}
+            <div className="mt-4 pt-4 border-t border-emerald-100 space-y-2">
+              <Button variant="outline" size="sm" className="w-full" asChild>
+                <Link href="/donar">
+                  <Heart className="h-4 w-4 mr-2" />
+                  Donar
+                </Link>
+              </Button>
+              <Button size="sm" className="w-full" asChild>
+                <Link href="/cursos">
+                  <GraduationCap className="h-4 w-4 mr-2" />
+                  Cursos
+                </Link>
+              </Button>
             </div>
           </div>
         )}
