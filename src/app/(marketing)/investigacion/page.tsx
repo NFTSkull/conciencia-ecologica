@@ -5,262 +5,249 @@ import { SectionBanner } from '@/components/sections/section-banner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ExternalLink, FileText, BookOpen, GraduationCap, FileBook } from 'lucide-react';
-import { formatDate } from '@/lib/utils';
-
-// Datos de ejemplo - en producción vendrían de Supabase
-const publicaciones = [
-  {
-    id: '1',
-    tipo: 'tesis' as const,
-    titulo: 'El metabolismo urbano de la Zona Metropolitana de Toluca, México',
-    autores: 'Montoya García, Dainiz Noray',
-    anio: 2023,
-    contenedor: 'Tesis Doctoral - Universidad Autónoma del Estado de México',
-    doi: null,
-    url: 'http://ri.uaemex.mx/handle/20.500.11799/137771',
-    pdf_url: null,
-    destacado: true
-  },
-  {
-    id: '2',
-    tipo: 'cientifico' as const,
-    titulo: 'Impacto del metabolismo socio-urbano en el Estado de México, México 2010–2020',
-    autores: 'Montoya García, Dainiz Noray',
-    anio: 2024,
-    contenedor: 'Letras Verdes - Revista Latinoamericana de Estudios Socioambientales',
-    doi: '10.17141/letrasverdes.35.2024.6087',
-    url: 'https://doi.org/10.17141/letrasverdes.35.2024.6087',
-    pdf_url: null,
-    destacado: true
-  },
-  {
-    id: '3',
-    tipo: 'cientifico' as const,
-    titulo: 'Metabolismo urbano de los municipios de Toluca y Metepec: análisis comparativo de indicadores de sustentabilidad',
-    autores: 'Montoya García, Dainiz Noray',
-    anio: 2023,
-    contenedor: 'Quivera - Revista de Estudios Territoriales',
-    doi: '10.36677/qret.v25i2.19063',
-    url: 'https://quivera.uaemex.mx/article/view/19063',
-    pdf_url: null,
-    destacado: false
-  },
-  {
-    id: '4',
-    tipo: 'cientifico' as const,
-    titulo: 'Metabolismo energético da Zona Metropolitana de Toluca, México',
-    autores: 'Montoya García, Dainiz Noray',
-    anio: 2023,
-    contenedor: 'Revista Iberoamericana de Bioeconomía y Cambio Climático',
-    doi: null,
-    url: 'https://redibec.org/ojs/index.php/revibec/article/view/vol35-2-7',
-    pdf_url: null,
-    destacado: false
-  },
-  {
-    id: '5',
-    tipo: 'cientifico' as const,
-    titulo: 'Índices metabólicos para la evaluación de la sustentabilidad urbana: caso ZMT, México',
-    autores: 'Montoya García, Dainiz Noray',
-    anio: 2023,
-    contenedor: 'Estudios Ambientales',
-    doi: '10.33413/eau.2023.230',
-    url: 'https://doi.org/10.33413/eau.2023.230',
-    pdf_url: null,
-    destacado: false
-  },
-  {
-    id: '6',
-    tipo: 'capitulo' as const,
-    titulo: 'Metabolismo urbano como propuesta alternativa para la planeación sustentable',
-    autores: 'Montoya García, Dainiz Noray',
-    anio: 2023,
-    contenedor: 'Libro: Planeación Urbana y Sustentabilidad',
-    doi: null,
-    url: 'http://hdl.handle.net/20.500.11799/139900',
-    pdf_url: null,
-    destacado: false
-  },
-  {
-    id: '7',
-    tipo: 'capitulo' as const,
-    titulo: 'Pensamiento e instrumentalización de la complejidad en el mundo VUCA',
-    autores: 'Montoya García, Dainiz Noray',
-    anio: 2023,
-    contenedor: 'Libro: Universidad Libre, Bogotá',
-    doi: null,
-    url: null,
-    pdf_url: null,
-    destacado: false
-  }
-];
-
-const tipos = {
-  tesis: { label: 'Tesis', icon: GraduationCap, color: 'bg-blue-100 text-blue-800' },
-  cientifico: { label: 'Artículo Científico', icon: FileText, color: 'bg-green-100 text-green-800' },
-  divulgacion: { label: 'Divulgación', icon: BookOpen, color: 'bg-purple-100 text-purple-800' },
-  capitulo: { label: 'Capítulo de Libro', icon: FileBook, color: 'bg-orange-100 text-orange-800' }
-};
-
-const anos = [2024, 2023, 2022, 2021, 2020];
+import { 
+  BookOpen, 
+  Users, 
+  Target, 
+  BarChart3, 
+  Clock, 
+  ExternalLink,
+  Leaf,
+  Building2,
+  Zap,
+  Globe
+} from 'lucide-react';
 
 export default function InvestigacionPage() {
-  const [filtroAno, setFiltroAno] = useState<number | null>(null);
-  const [filtroTipo, setFiltroTipo] = useState<string | null>(null);
-
-  const publicacionesFiltradas = publicaciones.filter(pub => {
-    if (filtroAno && pub.anio !== filtroAno) return false;
-    if (filtroTipo && pub.tipo !== filtroTipo) return false;
-    return true;
-  });
-
-  const limpiarFiltros = () => {
-    setFiltroAno(null);
-    setFiltroTipo(null);
-  };
+  const researchAreas = [
+    {
+      title: 'Metabolismo Urbano',
+      description: 'Análisis termodinámico de flujos energéticos y materiales en sistemas urbanos complejos',
+      icon: Building2,
+      color: 'emerald'
+    },
+    {
+      title: 'Sistemas Complejos',
+      description: 'Modelado de interacciones socio-ambientales para la resiliencia urbana',
+      icon: Zap,
+      color: 'blue'
+    },
+    {
+      title: 'Sustentabilidad',
+      description: 'Indicadores y métricas para ciudades del futuro',
+      icon: Leaf,
+      color: 'teal'
+    },
+    {
+      title: 'Conflictos Socioambientales',
+      description: 'Análisis de tensiones entre desarrollo urbano y conservación ambiental',
+      icon: Target,
+      color: 'orange'
+    }
+  ];
 
   return (
-    <div data-theme="theme-investigacion">
+    <div>
       <SectionBanner
         title="Investigación"
-        subtitle="Explora publicaciones científicas, tesis y capítulos sobre metabolismo urbano, sustentabilidad y complejidad socio-ambiental"
-        theme="theme-investigacion"
+        subtitle="Explorando la frontera del conocimiento en sustentabilidad urbana y metabolismo social"
+        theme="theme-research"
       />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Filtros */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 mb-4">
-            <span className="text-sm font-medium text-slate-700">Filtros:</span>
-            
-            {/* Filtro por año */}
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-slate-600">Año:</span>
-              <div className="flex gap-1">
-                {anos.map(ano => (
-                  <button
-                    key={ano}
-                    onClick={() => setFiltroAno(filtroAno === ano ? null : ano)}
-                    className={`px-3 py-1 text-sm rounded-md transition-colors ${
-                      filtroAno === ano 
-                        ? 'bg-emerald-600 text-white' 
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                    }`}
-                  >
-                    {ano}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Filtro por tipo */}
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-slate-600">Tipo:</span>
-              <div className="flex gap-1">
-                {Object.entries(tipos).map(([key, tipo]) => (
-                  <button
-                    key={key}
-                    onClick={() => setFiltroTipo(filtroTipo === key ? null : key)}
-                    className={`px-3 py-1 text-sm rounded-md transition-colors ${
-                      filtroTipo === key 
-                        ? 'bg-emerald-600 text-white' 
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                    }`}
-                  >
-                    {tipo.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {(filtroAno || filtroTipo) && (
-              <Button variant="outline" size="sm" onClick={limpiarFiltros}>
-                Limpiar filtros
-              </Button>
-            )}
+      {/* Líneas de Investigación */}
+      <section className="py-16 bg-gradient-to-br from-slate-50 to-emerald-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-slate-900 mb-4">
+              Líneas de Investigación
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Explorando la frontera del conocimiento en sustentabilidad urbana y metabolismo social
+            </p>
           </div>
 
-          <p className="text-sm text-slate-600">
-            Mostrando {publicacionesFiltradas.length} de {publicaciones.length} publicaciones
-          </p>
-        </div>
-
-        {/* Listado de publicaciones */}
-        <div className="space-y-6">
-          {publicacionesFiltradas.map((pub) => {
-            const tipo = tipos[pub.tipo];
-            const TipoIcon = tipo.icon;
-            
-            return (
-              <Card key={pub.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <Badge className={tipo.color}>
-                          <TipoIcon className="h-3 w-3 mr-1" />
-                          {tipo.label}
-                        </Badge>
-                        <Badge variant="outline">{pub.anio}</Badge>
-                        {pub.destacado && (
-                          <Badge variant="secondary" className="bg-yellow-100 text-yellow-800">
-                            Destacado
-                          </Badge>
-                        )}
-                      </div>
-                      <CardTitle className="text-lg text-slate-900 mb-2">
-                        {pub.titulo}
-                      </CardTitle>
-                      <CardDescription className="text-slate-600">
-                        <strong>Autores:</strong> {pub.autores}
-                      </CardDescription>
-                      <CardDescription className="text-slate-600">
-                        <strong>Publicado en:</strong> {pub.contenedor}
-                      </CardDescription>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {researchAreas.map((area, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+                <CardHeader className="text-center">
+                  <div className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-${area.color}-100 mx-auto mb-4`}>
+                    <area.icon className={`h-8 w-8 text-${area.color}-600`} />
                   </div>
+                  <CardTitle className="text-xl text-slate-900">
+                    {area.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {pub.doi && (
-                      <Badge variant="outline" className="text-xs">
-                        DOI: {pub.doi}
-                      </Badge>
-                    )}
-                    {pub.url && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-3 w-3 mr-1" />
-                          Ver en {pub.tipo === 'tesis' ? 'repositorio' : 'fuente'}
-                        </a>
-                      </Button>
-                    )}
-                    {pub.pdf_url && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.pdf_url} target="_blank" rel="noopener noreferrer">
-                          <FileText className="h-3 w-3 mr-1" />
-                          Ver PDF
-                        </a>
-                      </Button>
-                    )}
-                  </div>
+                  <p className="text-slate-600 text-center leading-relaxed">
+                    {area.description}
+                  </p>
                 </CardContent>
               </Card>
-            );
-          })}
+            ))}
+          </div>
         </div>
+      </section>
 
-        {publicacionesFiltradas.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-slate-500">No se encontraron publicaciones con los filtros seleccionados.</p>
-            <Button variant="outline" onClick={limpiarFiltros} className="mt-4">
-              Limpiar filtros
+      {/* Encuesta de Investigación */}
+      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-slate-900 mb-4">
+              Participa en nuestra Investigación
+            </h2>
+            <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+              Tu participación es fundamental para entender mejor el metabolismo urbano del Estado de México.
+              Esta encuesta nos ayuda a analizar patrones de consumo y sustentabilidad en nuestra región.
+            </p>
+          </div>
+          <Card className="max-w-4xl mx-auto border-0 shadow-xl bg-white">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-600 mr-4">
+                    <BarChart3 className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-2xl font-bold text-slate-900">
+                      Cuestionario sobre Consumo Diario
+                    </h3>
+                    <p className="text-slate-600">
+                      Estado de México - Metabolismo Urbano
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-6 mb-6">
+                  <p className="text-slate-700 leading-relaxed">
+                    Este cuestionario ayuda a entender el perfil de consumo de personas del Estado de México,
+                    para un estudio de metabolismo urbano de dicha entidad. Te pedimos que tus respuestas sean
+                    verídicas y no pediremos nombres.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                  <div className="text-center">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 mx-auto mb-2">
+                      <Users className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Confidencial</h4>
+                    <p className="text-sm text-slate-600">No se solicitan nombres</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 mx-auto mb-2">
+                      <Clock className="h-6 w-6 text-green-600" />
+                    </div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Rápido</h4>
+                    <p className="text-sm text-slate-600">Solo 10-15 minutos</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 mx-auto mb-2">
+                      <Target className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Importante</h4>
+                    <p className="text-sm text-slate-600">Para investigación científica</p>
+                  </div>
+                </div>
+                <Button size="lg" asChild className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3">
+                  <a href="https://forms.gle/q8YbCrpZV5EtV9PC6" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-5 w-5 mr-2" />
+                    Participar en la Encuesta
+                  </a>
+                </Button>
+                <p className="text-sm text-slate-500 mt-4">
+                  Al hacer clic, serás dirigido a un formulario seguro de Google Forms
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Redes Sociales */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-slate-900 mb-4">
+              Síguenos en Redes Sociales
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Mantente al día con nuestras investigaciones, publicaciones y actividades de divulgación
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Card className="text-center hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+              <CardContent className="pt-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 mx-auto mb-4">
+                  <Globe className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-slate-900 mb-2">LinkedIn</h3>
+                <p className="text-sm text-slate-600 mb-4">
+                  Artículos profesionales y networking académico
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    Seguir
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="text-center hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+              <CardContent className="pt-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 mx-auto mb-4">
+                  <BookOpen className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-slate-900 mb-2">ResearchGate</h3>
+                <p className="text-sm text-slate-600 mb-4">
+                  Publicaciones científicas y colaboraciones
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    Seguir
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="text-center hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+              <CardContent className="pt-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 mx-auto mb-4">
+                  <Users className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-slate-900 mb-2">Academia.edu</h3>
+                <p className="text-sm text-slate-600 mb-4">
+                  Red académica y divulgación científica
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    Seguir
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            ¿Te interesa colaborar en investigación?
+          </h2>
+          <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+            Estoy disponible para colaboraciones académicas, consultorías especializadas y proyectos de investigación que contribuyan a la sustentabilidad urbana.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild>
+              <a href="/contacto">
+                Contactar para Colaboración
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-emerald-600" asChild>
+              <a href="/donar">
+                Apoyar el Proyecto
+              </a>
             </Button>
           </div>
-        )}
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
