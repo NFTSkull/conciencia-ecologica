@@ -4,8 +4,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
