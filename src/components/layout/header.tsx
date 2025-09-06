@@ -8,6 +8,7 @@ import { Leaf, Menu, X, GraduationCap, Heart, ChevronDown } from 'lucide-react';
 
 const navigation = [
   { name: 'Investigación', href: '/investigacion' },
+  { name: 'Publicaciones', href: '/publicaciones' },
   { name: 'Divulgación', href: '/divulgacion' },
   { name: 'Consultoría', href: '/consultoria' },
   { 
